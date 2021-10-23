@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		170FED65B36C2B4B184E0F41 /* Pods_InstagramCloneFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3DF12C95D3CCC70C48CE80 /* Pods_InstagramCloneFirestore.framework */; };
+		3C120C6E271B307600164EDA /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C120C6D271B307600164EDA /* UploadPostController.swift */; };
+		3C120C71271B354300164EDA /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C120C70271B354300164EDA /* InputTextView.swift */; };
+		3C120C74271F420000164EDA /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C120C73271F420000164EDA /* PostService.swift */; };
+		3C120C77271F559B00164EDA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C120C76271F559B00164EDA /* Post.swift */; };
+		3C120C7A272352F900164EDA /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C120C79272352F900164EDA /* PostViewModel.swift */; };
 		3C74DC0C2708ECEC00F0D7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74DC0B2708ECEC00F0D7DB /* AppDelegate.swift */; };
 		3C74DC0E2708ECEC00F0D7DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74DC0D2708ECEC00F0D7DB /* SceneDelegate.swift */; };
 		3C74DC152708ECF600F0D7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C74DC142708ECF600F0D7DB /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 
 /* Begin PBXFileReference section */
 		0F9E76E22FC0FDB629AE7330 /* Pods-InstagramCloneFirestore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramCloneFirestore.debug.xcconfig"; path = "Target Support Files/Pods-InstagramCloneFirestore/Pods-InstagramCloneFirestore.debug.xcconfig"; sourceTree = "<group>"; };
+		3C120C6D271B307600164EDA /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		3C120C70271B354300164EDA /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		3C120C73271F420000164EDA /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		3C120C76271F559B00164EDA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3C120C79272352F900164EDA /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		3C74DC082708ECEC00F0D7DB /* InstagramCloneFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C74DC0B2708ECEC00F0D7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C74DC0D2708ECEC00F0D7DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +145,7 @@
 			children = (
 				3C74DC462708FC9C00F0D7DB /* Extensions.swift */,
 				3CBD6FE127162FEF0030F2F3 /* Constants.swift */,
+				3C120C70271B354300164EDA /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 				3CBD6FB32714E89F0030F2F3 /* ImageUploader.swift */,
 				3CBD6FB62714E8AD0030F2F3 /* AuthService.swift */,
 				3CBD6FDE27162FB00030F2F3 /* UserService.swift */,
+				3C120C73271F420000164EDA /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -159,6 +171,7 @@
 				3C74DC362708F05500F0D7DB /* ImageSelectorController.swift */,
 				3C74DC3A2708F08200F0D7DB /* NotificationController.swift */,
 				3C74DC3D2708F08B00F0D7DB /* ProfileController.swift */,
+				3C120C6D271B307600164EDA /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +182,7 @@
 				3CBD6E922711FC0C0030F2F3 /* AuthenticationViewModel.swift */,
 				3CBD6FE72716386B0030F2F3 /* ProfileHeaderViewModel.swift */,
 				3CBD6FFB2718B8780030F2F3 /* UserCellViewModel.swift */,
+				3C120C79272352F900164EDA /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				3CBD6FE42716322A0030F2F3 /* User.swift */,
+				3C120C76271F559B00164EDA /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +349,7 @@
 			files = (
 				3CBD6FD627161B870030F2F3 /* ProfileCell.swift in Sources */,
 				3CBD6E8D2711E9DC0030F2F3 /* CustomTextField.swift in Sources */,
+				3C120C6E271B307600164EDA /* UploadPostController.swift in Sources */,
 				3CBD6E862711DD8F0030F2F3 /* LoginController.swift in Sources */,
 				3CBD6FB42714E89F0030F2F3 /* ImageUploader.swift in Sources */,
 				3C74DC372708F05500F0D7DB /* ImageSelectorController.swift in Sources */,
@@ -347,14 +363,18 @@
 				3CBD6FF92717FEA90030F2F3 /* UserCell.swift in Sources */,
 				3C74DC472708FC9C00F0D7DB /* Extensions.swift in Sources */,
 				3C74DC3E2708F08B00F0D7DB /* ProfileController.swift in Sources */,
+				3C120C74271F420000164EDA /* PostService.swift in Sources */,
 				3CBD6FDF27162FB00030F2F3 /* UserService.swift in Sources */,
 				3C74DC312708F00B00F0D7DB /* FeedController.swift in Sources */,
+				3C120C77271F559B00164EDA /* Post.swift in Sources */,
 				3CBD6FE227162FEF0030F2F3 /* Constants.swift in Sources */,
 				3C74DC2D2708EDE400F0D7DB /* MainTabController.swift in Sources */,
 				3CBD6E8A2711DD9F0030F2F3 /* RegistrationController.swift in Sources */,
 				3C74DC0E2708ECEC00F0D7DB /* SceneDelegate.swift in Sources */,
+				3C120C7A272352F900164EDA /* PostViewModel.swift in Sources */,
 				3CBD6FE82716386B0030F2F3 /* ProfileHeaderViewModel.swift in Sources */,
 				3CBD6FB72714E8AD0030F2F3 /* AuthService.swift in Sources */,
+				3C120C71271B354300164EDA /* InputTextView.swift in Sources */,
 				3CBD6FE52716322A0030F2F3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

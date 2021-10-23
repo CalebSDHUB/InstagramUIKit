@@ -11,18 +11,21 @@ class FeedCell: UICollectionViewCell {
     
     // Mark: - Properties
     
+    var viewModel: PostViewModel? {
+        didSet { configure() }
+    }
+    
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleToFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
-        iv.image = #imageLiteral(resourceName: "color_flame")
+        iv.backgroundColor = .lightGray
         return iv
     }()
     
     private lazy var usernameButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Color Flame", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(didTapUsername), for: .touchUpInside)
         return button
@@ -58,18 +61,15 @@ class FeedCell: UICollectionViewCell {
         return button
     }()
     
-    private let likeLabel: UILabel = {
+    private let likesLabel: UILabel = {
         let label = UILabel()
-        label.text = "I like"
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     private let captionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Some test caption for now..."
         label.font = UIFont.systemFont(ofSize: 14)
-
         return label
     }()
     
@@ -103,14 +103,14 @@ class FeedCell: UICollectionViewCell {
         
         configureActionButtons()
         
-        addSubview(likeLabel)
-        likeLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
+        addSubview(likesLabel)
+        likesLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
         
         addSubview(captionLabel)
-        captionLabel.anchor(top: likeLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
-        
+        captionLabel.anchor(top: likesLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+
         addSubview(postTimeLabel)
-        captionLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+        postTimeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
     }
     
     required init?(coder: NSCoder) {
@@ -124,6 +124,15 @@ class FeedCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        captionLabel.text = viewModel.caption
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+        profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
+        usernameButton.setTitle(viewModel.username, for: .normal)
+        likesLabel.text = viewModel.likesLabelText
+    }
     
     private func configureActionButtons() {
         let stackView = UIStackView(arrangedSubviews: [likeButton, commentButton, shareButton])
