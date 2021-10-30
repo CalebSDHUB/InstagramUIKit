@@ -52,6 +52,7 @@ class LoginController: UIViewController {
     private let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Forgot your password?", secondPart: "Get help signing in.")
+        button.addTarget(self, action: #selector(handleShowResetPassword), for: .touchUpInside)
         return button
     }()
     
@@ -99,8 +100,14 @@ class LoginController: UIViewController {
         } else {
             print("Error: Text field initialization")
         }
-        
         updateForm()
+    }
+    
+    @objc func handleShowResetPassword() {
+        let controller = ResetPasswordController()
+        controller.delegate = self
+        controller.email = emailTextField.text
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: - Helpers
@@ -142,5 +149,15 @@ extension LoginController: FormViewModel {
         loginbutton.backgroundColor = viewModel.buttonBackgroundColor
         loginbutton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         loginbutton.isEnabled = viewModel.formIsValid
+    }
+}
+
+// MARK: - ResetPasswordControllerDelegate
+
+extension LoginController: ResetPasswordControllerDelegate {
+    func controllerDidSendResetPasswordLink(_ controller: ResetPasswordController) {
+        navigationController?.popViewController(animated: true)
+        showMessage(withTitle: "Success",
+                    message: "We sent a link to your email. To reset your password")
     }
 }

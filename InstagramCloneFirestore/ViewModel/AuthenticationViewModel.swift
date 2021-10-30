@@ -46,3 +46,10 @@ struct RegistrationViewModel: AuthenticationViewModel {
         return email?.isEmpty == false && password?.isEmpty == false && fullname?.isEmpty == false && username?.isEmpty == false
     }
 }
+
+struct ResetPasswordViewModel: AuthenticationViewModel {
+    
+    var email: String?
+    
+    var formIsValid: Bool { return email?.isEmpty == false }
+}

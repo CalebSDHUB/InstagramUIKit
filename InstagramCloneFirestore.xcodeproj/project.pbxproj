@@ -50,6 +50,7 @@
 		3CBD6FE82716386B0030F2F3 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD6FE72716386B0030F2F3 /* ProfileHeaderViewModel.swift */; };
 		3CBD6FF92717FEA90030F2F3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD6FF82717FEA80030F2F3 /* UserCell.swift */; };
 		3CBD6FFC2718B8780030F2F3 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD6FFB2718B8780030F2F3 /* UserCellViewModel.swift */; };
+		3CE7E38B272D59D800BF540B /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE7E38A272D59D800BF540B /* ResetPasswordController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		3CBD6FE72716386B0030F2F3 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		3CBD6FF82717FEA80030F2F3 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		3CBD6FFB2718B8780030F2F3 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		3CE7E38A272D59D800BF540B /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		5A3DF12C95D3CCC70C48CE80 /* Pods_InstagramCloneFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramCloneFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91DBC3E93255FB03F28EC0C /* Pods-InstagramCloneFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramCloneFirestore.release.xcconfig"; path = "Target Support Files/Pods-InstagramCloneFirestore/Pods-InstagramCloneFirestore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +244,7 @@
 			children = (
 				3CBD6E852711DD8F0030F2F3 /* LoginController.swift */,
 				3CBD6E892711DD9F0030F2F3 /* RegistrationController.swift */,
+				3CE7E38A272D59D800BF540B /* ResetPasswordController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				3C74DC342708F01500F0D7DB /* SearchController.swift in Sources */,
 				3C74DC0C2708ECEC00F0D7DB /* AppDelegate.swift in Sources */,
 				3CBD6FF92717FEA90030F2F3 /* UserCell.swift in Sources */,
+				3CE7E38B272D59D800BF540B /* ResetPasswordController.swift in Sources */,
 				3C3BE0ED272AE982004AB0D8 /* Notification.swift in Sources */,
 				3C74DC472708FC9C00F0D7DB /* Extensions.swift in Sources */,
 				3C74DC3E2708F08B00F0D7DB /* ProfileController.swift in Sources */,
