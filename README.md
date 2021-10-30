@@ -1,3 +1,9 @@
+# Illustration
+
+
+
+![SimpleUIScreen](documents/niels-bohr-institute.png)
+
 # Instructions
 
 I have removed the GoogleService-Info.plist from the project as a safety measure.
