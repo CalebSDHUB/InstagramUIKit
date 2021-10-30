@@ -1,3 +1,13 @@
+# Description
+
+This is as a Instagram clone created with UIKit without the storyboard and it is integrated with firebase.
+
+## Firebase modules used:
+
+- Firestore.
+- Authentication.
+- Storage.
+
 # Instructions
 
 I have removed the GoogleService-Info.plist from the project as a safety measure.
