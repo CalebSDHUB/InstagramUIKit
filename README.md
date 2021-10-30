@@ -1,6 +1,6 @@
 # Description
 
-This is as a Instagram clone created with UIKit without the storyboard and it is integrated with firebase.
+This is an Instagram clone created with UIKit without the storyboard and it is integrated with firebase.
 
 ## Firebase modules used:
 
