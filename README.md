@@ -1,8 +1,8 @@
-# Illustration
+# Illustration :camera:
 
 ![SimpleUIScreen](documents/niels-bohr-institute.png)
 
-# Description
+# Description :page_with_curl:
 
 This is an Instagram clone created with UIKit without the storyboard and it is integrated with firebase.
 
@@ -12,7 +12,7 @@ This is an Instagram clone created with UIKit without the storyboard and it is i
 - Authentication.
 - Storage.
 
-# Instructions
+# Instructions :books:
 
 I have removed the GoogleService-Info.plist from the project as a safety measure.
 
